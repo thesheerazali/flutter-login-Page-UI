@@ -22,6 +22,7 @@ class LoginPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           // crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+         const   Spacer(),
             const LogoWithText(),
             const SizedBox(
               height: 24,
@@ -62,13 +63,10 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
-              height: 50,
-            ),
+            Spacer(),
             Text('New User? Create Account',
                 style: TextStyle(color: Colors.black)),
           ],
-          
         ),
       ),
     );
