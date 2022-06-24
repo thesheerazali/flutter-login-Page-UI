@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
+import '../components/login_button.dart';
 import '../components/logo_with_text.dart';
 import '../components/textfield.dart';
 import '../components/textfield2.dart';
@@ -12,6 +13,7 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: const Text('Flutter Login Page'),
         elevation: 0,
@@ -22,7 +24,7 @@ class LoginPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           // crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-         const   Spacer(),
+            const Spacer(),
             const LogoWithText(),
             const SizedBox(
               height: 24,
@@ -39,32 +41,9 @@ class LoginPage extends StatelessWidget {
                 style: TextStyle(color: Colors.black),
               ),
             ),
-            GestureDetector(
-              onTap: () {
-                print('Login Succesfully');
-              },
-              child: Container(
-                height: 50,
-                width: 230,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: Colors.teal,
-                ),
-                child: const Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: Text(
-                    'Login',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        fontSize: 25,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white),
-                  ),
-                ),
-              ),
-            ),
+            const LoginButton(),
             Spacer(),
-            Text('New User? Create Account',
+            const Text('New User? Create Account',
                 style: TextStyle(color: Colors.black)),
           ],
         ),
@@ -72,3 +51,4 @@ class LoginPage extends StatelessWidget {
     );
   }
 }
+
