@@ -13,10 +13,18 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.blueGrey,
       appBar: AppBar(
+        backgroundColor: Colors.black,
         title: const Text('Flutter Login Page'),
-        elevation: 0,
+        elevation: 10,
+        centerTitle: true,
+        toolbarHeight: 80,
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+              bottomRight: Radius.circular(50),
+              bottomLeft: Radius.circular(50)),
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(12.0),
@@ -43,8 +51,13 @@ class LoginPage extends StatelessWidget {
             ),
             const LoginButton(),
             Spacer(),
-            const Text('New User? Create Account',
-                style: TextStyle(color: Colors.black)),
+            TextButton(
+              onPressed: () {},
+              child: const Text(
+                'New User? Create Account',
+                style: TextStyle(color: Colors.black),
+              ),
+            ),
           ],
         ),
       ),

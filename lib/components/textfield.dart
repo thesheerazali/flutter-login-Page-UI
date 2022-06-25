@@ -8,7 +8,12 @@ class MyTextFiled extends StatelessWidget {
     return const TextField(
       decoration: InputDecoration(
         icon: Icon(Icons.email),
-        border: OutlineInputBorder(),
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.all(
+            Radius.circular(20),
+          ),
+        ),
+        labelText: 'Email',
         hintText: 'Email',
       ),
     );

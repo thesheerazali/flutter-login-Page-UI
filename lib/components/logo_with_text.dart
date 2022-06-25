@@ -8,19 +8,20 @@ class LogoWithText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: 30),
+      padding: const EdgeInsets.only(bottom: 10),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Image.asset(
-            'assets/images/flutter.png',
-            width: 70,
+        children: const [
+          Center(
+            child: FlutterLogo(
+              size: 80,
+            ),
           ),
-          const Padding(
+          Padding(
             padding: const EdgeInsets.only(right: 20),
             child: Text(
               'Flutter',
-              style: TextStyle(fontSize: 50, color: Colors.grey),
+              style: TextStyle(fontSize: 50, color: Colors.black),
             ),
           )
         ],
